@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Chat to magazine</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+<p><h1 align="center">Chat to Magazine</h1></p>
+<div class="container">
+<div class="row">
+    
+    <h1><center>THE IBC DAILY 2023: DAY 1</center></h1>
+    <h2>Would you like to know Specific details about the event? 
+      <br>Ask a query ?</h2>
+    <form method="post" action="/" enctype="multipart/form-data">
+        
+    </form>
+    <form method="POST">
+        <input name="text" size="50">
+        <input type="submit" >
+    </form>
+    <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </p>
+</div>
+</div>
+</body>
+</html>
